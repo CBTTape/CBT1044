@@ -1,0 +1,20 @@
+                    SIMPLE INSTALLATION STEPS
+
+1.  In the CBTXREF exec, look for string:
+
+      parse value keywd( "ISPTLIB" )
+
+    and change the dataset name to your ISPTLIB library that you
+    want to use.  Change that name as well, in the job $COPEXEC.
+
+2.  After making sure that the dataset names are correct, run the
+    job:  $COPEXEC
+
+3.  Execute the exec:  %CBTXREF
+
+4.  We are not talking about renewing the table here.  We are only
+    dealing with the table as shipped with the package.
+
+  This note is from Sam Golob:   email:  sbgolob@cbttape.org
+
+

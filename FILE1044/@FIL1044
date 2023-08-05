@@ -1,0 +1,43 @@
+//***FILE1044 is from Frank Clarke and contains a way to find out   *   FILE1044
+//*           which CBT Tape files contain a particular member      *   FILE1044
+//*           name.  The package is called by the principal EXEC    *   FILE1044
+//*           name, CBTXREF.                                        *   FILE1044
+//*                                                                 *   FILE1044
+//*       THIS PROGRAM IS A VERY HELPFUL AID TO FINDING OUT WHAT    *   FILE1044
+//*       IS ON THE CBT TAPE - BY MEMBER NAME, REFERRING TO FILE    *   FILE1044
+//*       NUMBER.                                                   *   FILE1044
+//*                                                                 *   FILE1044
+//*           email:  Frank Clarke <rexxhead@yahoo.com>             *   FILE1044
+//*                                                                 *   FILE1044
+//*           Please read the member $READNE.                       *   FILE1044
+//*                                                                 *   FILE1044
+//*           For simple installation instructions, see the         *   FILE1044
+//*           member $INSTALL.                                      *   FILE1044
+//*                                                                 *   FILE1044
+//*                  CBT File 1044 - Directory                      *   FILE1044
+//*                                                                 *   FILE1044
+//*                 Usage or                                        *   FILE1044
+//*       Member    Caller      Description                         *   FILE1044
+//*       ========  =========   ================================    *   FILE1044
+//*                                                                 *   FILE1044
+//*       @FIL1044  text        This data                           *   FILE1044
+//*                                                                 *   FILE1044
+//*       @README   text        Introduction                        *   FILE1044
+//*                                                                 *   FILE1044
+//*       CBTSCAN   data        ISPTLIB(CBTSCAN)                    *   FILE1044
+//*                                                                 *   FILE1044
+//*       CBTXREF   exec        The main dialog                     *   FILE1044
+//*                                                                 *   FILE1044
+//*       DUP       exec        Make a copy of a dataset            *   FILE1044
+//*                                                                 *   FILE1044
+//*       FCCMDUPD  exec        Required subroutine                 *   FILE1044
+//*                                                                 *   FILE1044
+//*       KED       exec        Edit DDN(member); aliased as        *   FILE1044
+//*                             KBR, KVW                            *   FILE1044
+//*                                                                 *   FILE1044
+//*       LA        exec        LISTA ST to the queue               *   FILE1044
+//*                                                                 *   FILE1044
+//*       REALIAS   exec        Recreate aliases                    *   FILE1044
+//*                                                                 *   FILE1044
+//*       TRAPOUT   exec        Required subroutine                 *   FILE1044
+//*                                                                 *   FILE1044

@@ -1,0 +1,42 @@
+ This is the CBTXREF package.  CBTXREF is an ISPF dialog using table
+ CBTSCAN that provides a cross-reference showing which membernames are
+ present on which CBT file(s).  The primary routine is CBTXREF.  Several
+ subsidiary subroutines are included as well.  The calling sequence for
+ any of the routines in this package can be obtained by sending a
+ question mark as the first parameter:
+         ===> tso cbtxref ?
+
+ Also included is ISPF table CBTSCAN.  This member should be moved to an
+ appropriate ISPTLIB dataset.  CBTSCAN details the entire CBT inventory
+ whether or not those files are present on a remote system.
+
+ Routine KED is designed to have two aliases: KBR and KVW.  Once KED is
+ loaded to your SYSEXEC or SYSPROC, run REALIAS against the member.
+ REALIAS will establish the proper aliases.  If KED ever requires a
+ change, rerun REALIAS after the change.
+
+ Both KED and CBTXREF will establish their own command table entries if
+ requested.  To request these routines to build new command table
+ entries, call them with INSTALL as a parameter:
+     ===> tso KED (( INSTALL
+              (generates KBR, KED, and KVW)
+     ===> tso CBTXREF (( INSTALL
+              (generates XREF )
+ FCCMDUPD, the routine that writes the command table entries, cannot
+ write directly to the DASD original of a table that is currently open,
+ so specify a non-open copy of the intended command table for the
+ newly-generated commands, and IEBCOPY that copy to the appropriate
+ destination.
+
+ CBTXREF expects to find files on a user site that conform to certain
+ naming standards.  See the HELP-text for CBTXREF:
+     ===> tso cbtxref ?
+ Installers should probably consider modifying certain defaults within
+ CBTXREF to match local conditions so that it is not necessary to
+ specify them as parameters.
+
+ Obviously, it's not possible to operate on files that don't exist on
+ your site, so 'missing' files are automatically excluded from certain
+ processes.  If your site typically downloads a complete copy of the CBT
+ inventory, there won't be any missing files.
+
